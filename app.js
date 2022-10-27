@@ -11,6 +11,8 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static("public"))
 app.set("view engine","ejs");
 
+
+
 app.get("/",function(req,res){
     
     const day = date.getDate();
@@ -34,6 +36,8 @@ app.get("/work",function(req,res){
         route :"/work"
     })
 });
+
+
 
 app.post("/work",function(req,res){
     const item = req.body.newItem;
